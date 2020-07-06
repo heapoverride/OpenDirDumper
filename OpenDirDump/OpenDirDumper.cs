@@ -315,7 +315,7 @@ namespace OpenDirDump
 
         public string CountryName = "";
         public string CountryCode = "";
-        public long Ping = -1;
+        public long ResponseTime = 0;
 
         public Proxy()
         {
