@@ -235,19 +235,6 @@ namespace OpenDirDump
 
         private string[] ExtractLinksFromURL(string url, out WebResponse response)
         {
-            //using (WebClient client = new WebClient())
-            //{
-            //    if (this.proxies.Count > 0)
-            //    {
-            //        client.Proxy = new WebProxy(GetRandomProxy().ToString());
-            //    }
-
-            //    client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
-            //    string text = client.DownloadString(url);
-
-            //    return ExtractLinksFromText(text);
-            //}
-
             WebRequest request = WebRequest.Create(url);
             request.Headers.Add("User-Agent", GetRandomUserAgent());
             if (this.proxies.Count > 0)
